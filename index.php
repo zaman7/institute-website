@@ -427,7 +427,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-6 col-6">
-                    <img src="images/logo-small.png" alt="" class="img-fluid">
+                    <img src="dashboard/images/logo/logo.gif" alt="" class="img-fluid">
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the best.</p>
 
 
