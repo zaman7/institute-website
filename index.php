@@ -22,6 +22,7 @@
     $notices = new Notices();
     $subjects = new Subjects();
     $blogs = new BlogPosts();
+    $stats = new Stats();
 
 
 
@@ -34,6 +35,7 @@
     $getNotices = $notices->getNoticesItems();
     $getSub = $subjects->getTechnology();
     $getBlog = $blogs->getBlogsPosts();
+    $getAllStats = $stats->getStats();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -316,30 +318,13 @@
         <div class="count-overlay">
             <div class="container text-center">
                 <div class="row">
+                <?php foreach ($getAllStats as $getAllStat): ?>
                     <div class="col-md-3 col-6 col-sm-3 county text-center">
-                        <i class="fa fa-university"></i>
-                        <div class="count num">8</div>
-                        <p>depertments</p>
-                    </div>
-
-                    <div class="col-md-3 col-6 col-sm-3 county text-center">
-                        <i class="fa fa-users"></i>
-                        <div class="count num">24</div>
-                        <p>teschers</p>
-                    </div>
-
-                    <div class="col-md-3 col-6 col-sm-3 county text-center">
-                        <i class="fa fa-university"></i>
-                        <div class="count num">78</div>
-                        <p>staffs</p>
-                    </div>
-
-                    <div class="col-md-3 col-6 col-sm-3 county text-center">
-                        <i class="fa fa-university"></i>
-                        <div class="count num">318</div>
-                        <p>students</p>
-                    </div>
-
+                        <i class="fa fa-<?=$getAllStat['stat_icon']?>"></i>
+                        <div class="count num"><?=$getAllStat['stat_amount']?></div>
+                        <p><?=$getAllStat['stat_name']?></p>
+                    </div>                   
+                <?php endforeach ?>
                 </div>
             </div>
         </div>

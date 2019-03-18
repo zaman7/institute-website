@@ -45,7 +45,13 @@
                                             <tr>
                                                 <td><?php echo $i; ?></td>
                                                 <td class="text-center"><img src="<?php echo $value['slider_images']; ?>" width="300px"></td>
-                                                <td class="text-center"><a href="?del_slider=<?php echo $value['id']; ?>&delete" class="btn btn-danger" onclick="javascript:confirm('Are Your Sure?') return false;">Delete</a></td>
+                                                <td>
+                                                    
+                                                    <div class="btn-group" role="group" aria-label="Action button">
+                                                        <a href="" class="btn btn-warning">Edit</a>
+                                                        <a href="?del_slider=<?php echo $value['id']; ?>&delete" class="btn btn-danger" onclick="javascript:confirm('Are Your Sure?') return false;">Delete</a>
+                                                    </div>
+                                                </td>
                                             </tr>
                                         <?php } } ?>
                                             

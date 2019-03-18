@@ -47,7 +47,12 @@
                                                 <td><?php echo $i; ?></td>
                                                 <td><?php echo $value['notices_title']; ?></td>
                                                 <td><?php echo $helper->textShorten($value['notices_desc'],100); ?></td>
-                                                <td class="text-center"><a href="?del_slider=<?php echo $value['id']; ?>&delete" class="btn btn-danger" onclick="javascript:confirm('Are Your Sure?') return false;">Delete</a></td>
+                                                <td>
+                                                    <div class="btn-group" role="group" aria-label="Action button">
+                                                        <a href="" class="btn btn-warning">Edit</a>
+                                                        <a href="?del_slider=<?php echo $value['id']; ?>&delete" class="btn btn-danger" onclick="javascript:confirm('Are Your Sure?') return false;">Delete</a>
+                                                    </div>
+                                                </td>
                                             </tr>
                                         <?php } } ?>
                                             

@@ -1,9 +1,9 @@
 <?php require_once 'includes/header.php'; ?>
 <?php 
-    if (isset($_GET['del_news'])){
-        $del_news = $_GET['del_news'];
-        $delNews  = $latest_news->deleteNews($del_news);
-    }
+    /*if (isset($_GET['del_notices'])){
+        $del_notices = $_GET['del_notices'];
+        $deleteNotices  = $notices->deleteNotices($del_notices);
+    }*/
 
 ?>
     <section class="main-section">
@@ -17,38 +17,39 @@
                     <div class="main-content">
                         <div class="display-flax-content">
                             <div class="section-title">
-                                <h2>Latest News</h2>
+                                <h2>Stats Lists</h2>
                             </div>
                             <div class="content">
                                 <div class="catlist">
-                                    <?php if (isset($delNews)) {
-                                        echo $delNews;
-                                    } ?>
                                     <table class="table table-striped" id="dataTable">
                                         <thead>
                                             <tr>
-                                                <th width="10%">Serial No.</th>
-                                                <th width="70%">News Title</th>
-                                                <th width="20%" class="text-center">Action</th>
+                                                <th>Serial No.</th>
+                                                <th>Stats Name</th>
+                                                <th>Stats Amount</th>
+                                                <th>Icon</th>
+                                                <th class="text-center">Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
 
                                             <?php 
-                                                $getLatestNews = $latest_news->getLatestNews();
-                                                if ($getLatestNews) {
+                                                $getStats = $stats->getAllStats();
+                                                if ($getStats) {
                                                     $i= 0;
-                                                    while ($value = $getLatestNews->fetch_assoc()) {
+                                                    while ($value = $getStats->fetch_assoc()) {
                                                         $i++;
                                                 
                                             ?>
                                             <tr>
                                                 <td><?php echo $i; ?></td>
-                                                <td><?php echo $value['news_title']; ?></td>
-                                                <td class="text-center">
+                                                <td><?php echo $value['stat_name']; ?></td>
+                                                <td><?php echo $value['stat_amount']; ?> </td>
+                                                <td><i class="fa fa-<?php echo $value['stat_icon']; ?>"></i></td>
+                                                <td>
                                                     <div class="btn-group" role="group" aria-label="Action button">
-                                                        <a href="" class="btn btn-warning">Edit</a>
-                                                        <a href="view_news.php?del_news=<?php echo $value['id']; ?>&delete" class="btn btn-danger" onclick="javascript:confirm('Are Your Sure?') return false;">Delete</a>
+                                                        <a href="add_subjects.php?edit_subjects=<?php echo $value['id'] ?>" class="btn btn-warning">Edit</a>
+                                                        <a href="" class="btn btn-danger">Delete</a></td>
                                                     </div>
                                                 </td>
                                             </tr>
@@ -65,5 +66,7 @@
             </div>
         </div>
     </section>
+    
+
 
 <?php require_once 'includes/footer.php'; ?>

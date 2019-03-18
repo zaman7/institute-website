@@ -17,7 +17,7 @@
                     <div class="main-content">
                         <div class="display-flax-content">
                             <div class="section-title">
-                                <h2>Notices Lists</h2>
+                                <h2>Subjects Lists</h2>
                             </div>
                             <div class="content">
                                 <div class="catlist">
@@ -52,7 +52,12 @@
                                                 <td><?php echo $value['faculty_members']; ?> Faculty Members</td>
                                                 <td><?php echo $value['total_students']; ?>+ Students</td>
                                                 <td><i class="fa fa-<?php echo $value['icon']; ?>"></i></td>
-                                                <td><a href="add_subjects.php?edit_subjects=<?php echo $value['id'] ?>" class="btn btn-warning">Edit</a> || <a href="" class="btn btn-danger">Delete</a></td>
+                                                <td>
+                                                    <div class="btn-group" role="group" aria-label="Action button">
+                                                        <a href="add_subjects.php?edit_subjects=<?php echo $value['id'] ?>" class="btn btn-warning">Edit</a>
+                                                        <a href="" class="btn btn-danger">Delete</a></td>
+                                                    </div>
+                                                </td>
                                             </tr>
                                         <?php } } ?>
                                             
@@ -67,5 +72,7 @@
             </div>
         </div>
     </section>
+    
+
 
 <?php require_once 'includes/footer.php'; ?>

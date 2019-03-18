@@ -11,7 +11,7 @@
                     <div id="post-opt-m" class="collapse" aria-labelledby="post-opth-m" data-parent="#accordion">
                         <div class="content-body submenu">
                             <a href="add_blogs.php">Add Blgos</a>
-                            <a href="view_blogs.php">View Blogs</a>
+                            <a href="view_blogs.php">Manage Blogs</a>
                         </div>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
 
                     <div id="user-opt-m" class="collapse" aria-labelledby="user-opth-m" data-parent="#accordion">
                         <div class="content-body submenu">
-                            <a href="userlist.php">View Users</a>
+                            <a href="userlist.php">Manage Users</a>
                             <a href="adduser.php">Add Users</a>
                             <a href="profile.php">Your Profile</a>
                         </div>
@@ -46,7 +46,7 @@
                     <div id="news-opt-m" class="collapse" aria-labelledby="news-opth-m" data-parent="#accordion">
                         <div class="content-body submenu">
                             <a href="add_news.php">Add News</a>
-                            <a href="view_news.php">View News</a>
+                            <a href="view_news.php">Manage News</a>
                         </div>
                     </div>
                 </div>
@@ -57,7 +57,7 @@
                     <div id="slider-opt-m" class="collapse" aria-labelledby="slider-opth-m" data-parent="#accordion">
                         <div class="content-body submenu">
                             <a href="add_slider.php">Add Slider</a>
-                            <a href="view_slider.php">View Slider</a>
+                            <a href="view_slider.php">Manage Slider</a>
                         </div>
                     </div>
                 </div>
@@ -68,7 +68,7 @@
                     <div id="notices-opt-m" class="collapse" aria-labelledby="notices-opth-m" data-parent="#accordion">
                         <div class="content-body submenu">
                             <a href="add_notices.php">Add Notices</a>
-                            <a href="view_notices.php">View Notices</a>
+                            <a href="view_notices.php">Manage Notices</a>
                         </div>
                     </div>
                 </div>
@@ -79,7 +79,29 @@
                     <div id="sub-opt-m" class="collapse" aria-labelledby="sub-opth-m" data-parent="#accordion">
                         <div class="content-body submenu">
                             <a href="add_subjects.php">Add Subjects</a>
-                            <a href="view_subjects.php">View Subjects</a>
+                            <a href="view_subjects.php">Manage Subjects</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collapse-body">
+                    <h3><a data-toggle="collapse" data-target="#stat-opt-m" id="stat-opth-m" aria-expanded="true" aria-controls="stat-opt-m"><i class="fa fa-sliders" aria-hidden="true"></i> Stats Option<i class="fa fa-angle-down"></i> <i class="fa fa-angle-up"></i></a></h3>
+
+                    <div id="stat-opt-m" class="collapse" aria-labelledby="stat-opth-m" data-parent="#accordion">
+                        <div class="content-body submenu">
+                            <a href="add_stat.php">Add Stats</a>
+                            <a href="view_stat.php">Manage Stats</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collapse-body">
+                    <h3><a data-toggle="collapse" data-target="#gallary-opt-m" id="gallary-opth-m" aria-expanded="true" aria-controls="gallary-opt-m"><i class="fa fa-sliders" aria-hidden="true"></i> Gallery Option<i class="fa fa-angle-down"></i> <i class="fa fa-angle-up"></i></a></h3>
+
+                    <div id="gallary-opt-m" class="collapse" aria-labelledby="gallary-opth-m" data-parent="#accordion">
+                        <div class="content-body submenu">
+                            <a href="add_gallery.php">Add Gallery</a>
+                            <a href="view_gallery.php">Manage Gallery</a>
                         </div>
                     </div>
                 </div>

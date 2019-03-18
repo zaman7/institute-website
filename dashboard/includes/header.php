@@ -25,6 +25,7 @@
     $notices = new Notices();
     $subjects = new Subjects();
     $blogs = new BlogPosts();
+    $stats = new Stats();
 ?>
 <!DOCTYPE html>
 <html lang="en">

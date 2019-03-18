@@ -2,9 +2,8 @@
 <?php 
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $upAobut = $about->updateAbout($_POST);
+        $add_stat = $stats->insertStats($_POST);
     }
-    $getAbout = $about->getAboutContent();
 
 ?>
     <section class="main-section">
@@ -18,28 +17,32 @@
                     <div class="main-content">
                         <div class="display-flax-content">
                             <div class="section-title">
-                                <h2>About Institute</h2>
+                                <h2>Add Stats</h2>
                             </div>
                             <div class="content">
                                 <div class="catblock">
-                                    <?php if (isset($upAobut)) {
-                                        echo $upAobut;
-                                    } ?>
-                                    <?php if (isset($getAbout)) {
-                                        $aboutValue = $getAbout->fetch_assoc();
+                                    <?php if (isset($add_stat)) {
+                                        echo $add_stat;
                                     } ?>
                                     <form action="#" method="POST">
                                         <div class="form-group">
-                                            <label for="title">Title:</label>
-                                            <input type="text" name="about_title" value="<?php echo $aboutValue['about_title'] ?>" id="title" class="form-control">
+                                            <label for="category">Stat Name:</label>
+                                            <input type="text" name="stat_name" placeholder="Enter Stats Title.." id="category" class="form-control">
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="category">Details:</label>
-                                            <textarea name="description" rows="12" id="category" class="form-control"><?php echo $aboutValue['description'] ?></textarea>
+                                            <label for="category">Stat Icon:</label>
+                                            <input type="text" name="stat_icon" placeholder="Stats Icon" id="category" class="form-control">
+                                            <small><a href="https://fontawesome.com/v4.7.0/icons/">Include fontawesome icon class</a></small>
+                                            <br><small>ex: class="fa fa-desktop" type just-> desktop</small>
                                         </div>
 
-                                        <input type="submit" class="btn btn-success" name="submit" Value="Update" />
+                                        <div class="form-group">
+                                            <label for="category">Stat Amount:</label>
+                                            <input type="number" name="stat_amount" placeholder="Stats Icon" id="category" class="form-control">
+                                        </div>
+
+                                        <input type="submit" class="btn btn-success" name="submit" Value="Add Stats" />
                                     </form>
                                 </div>
                             </div>

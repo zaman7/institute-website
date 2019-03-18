@@ -43,7 +43,7 @@
 
 
  	public function getTechnology(){
-        $query = "SELECT * FROM subjects_table LIMIT 6";
+        $query = "SELECT * FROM subjects_table ORDER BY id DESC LIMIT 6";
         $result = $this->db->readData($query);
         return $result;
     }
