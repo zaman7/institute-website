@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 10, 2019 at 07:38 PM
+-- Generation Time: Mar 27, 2019 at 07:19 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.10
 
@@ -39,6 +39,7 @@ CREATE TABLE `about_table` (
 --
 
 INSERT INTO `about_table` (`id`, `about_title`, `description`) VALUES
+(1, 'WELCOME TO RIMT', 'Welcome to Pathshala Polytechnic Institute. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'),
 (1, 'WELCOME TO RIMT', 'Welcome to Pathshala Polytechnic Institute. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.');
 
 -- --------------------------------------------------------
@@ -89,6 +90,53 @@ INSERT INTO `blog_posts_table` (`id`, `posts_title`, `posts_body`, `posts_date`,
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `contacts_table`
+--
+
+CREATE TABLE `contacts_table` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `subject` varchar(100) NOT NULL,
+  `messages` varchar(255) NOT NULL,
+  `status` int(11) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `contacts_table`
+--
+
+INSERT INTO `contacts_table` (`id`, `name`, `email`, `subject`, `messages`, `status`) VALUES
+(1, 'Kamruzzaman', 'zaman@gmail.com', 'zaman', 'subject', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `galeries_table`
+--
+
+CREATE TABLE `galeries_table` (
+  `id` int(11) NOT NULL,
+  `gallery_tag` varchar(100) NOT NULL,
+  `gallery_images` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `galeries_table`
+--
+
+INSERT INTO `galeries_table` (`id`, `gallery_tag`, `gallery_images`) VALUES
+(1, 'campus', 'images/galeries/b67bab9085.jpg'),
+(2, 'photo', 'images/galeries/d93811d7e6.jpg'),
+(3, 'events', 'images/galeries/950bba262e.jpg'),
+(4, 'events', 'images/galeries/d9ce9c403e.jpg'),
+(6, 'campus', 'images/galeries/dbc4975291.jpg'),
+(8, 'video', 'images/galeries/56fc794ece.png'),
+(9, 'photo', 'images/galeries/f73c67f62f.jpg');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `latest_news_table`
 --
 
@@ -134,7 +182,7 @@ INSERT INTO `notices_table` (`id`, `notices_title`, `notices_date`, `notices_des
 --
 
 CREATE TABLE `sitedesc_table` (
-  `id` int(1) NOT NULL DEFAULT '1',
+  `id` int(11) NOT NULL DEFAULT '1',
   `siteLogo` varchar(100) NOT NULL,
   `phoneNumber` varchar(14) NOT NULL,
   `inistEmail` varchar(100) NOT NULL
@@ -185,7 +233,31 @@ CREATE TABLE `social_table` (
 --
 
 INSERT INTO `social_table` (`id`, `facebook`, `twitter`, `linkedin`, `google`) VALUES
+(1, 'http://www.facebook.com/zaman7i', 'http://www.twitter.com', 'http://www.linkedin.com', 'http://www.google.com'),
 (1, 'http://www.facebook.com/zaman7i', 'http://www.twitter.com', 'http://www.linkedin.com', 'http://www.google.com');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `stats_taable`
+--
+
+CREATE TABLE `stats_taable` (
+  `id` int(11) NOT NULL,
+  `stat_icon` varchar(100) NOT NULL,
+  `stat_amount` varchar(100) NOT NULL,
+  `stat_name` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `stats_taable`
+--
+
+INSERT INTO `stats_taable` (`id`, `stat_icon`, `stat_amount`, `stat_name`) VALUES
+(1, 'university', '8', 'Department'),
+(2, 'users', '44', 'TESCHERS'),
+(3, 'users', '22', 'STAFFS'),
+(4, 'graduation-cap', '1111', 'STUDENTS');
 
 -- --------------------------------------------------------
 
@@ -231,6 +303,18 @@ ALTER TABLE `blog_posts_table`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `contacts_table`
+--
+ALTER TABLE `contacts_table`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `galeries_table`
+--
+ALTER TABLE `galeries_table`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `latest_news_table`
 --
 ALTER TABLE `latest_news_table`
@@ -243,9 +327,21 @@ ALTER TABLE `notices_table`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `sitedesc_table`
+--
+ALTER TABLE `sitedesc_table`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `sliders_table`
 --
 ALTER TABLE `sliders_table`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `stats_taable`
+--
+ALTER TABLE `stats_taable`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -271,6 +367,18 @@ ALTER TABLE `blog_posts_table`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
+-- AUTO_INCREMENT for table `contacts_table`
+--
+ALTER TABLE `contacts_table`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `galeries_table`
+--
+ALTER TABLE `galeries_table`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
 -- AUTO_INCREMENT for table `latest_news_table`
 --
 ALTER TABLE `latest_news_table`
@@ -287,6 +395,12 @@ ALTER TABLE `notices_table`
 --
 ALTER TABLE `sliders_table`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `stats_taable`
+--
+ALTER TABLE `stats_taable`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `subjects_table`
