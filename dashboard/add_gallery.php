@@ -29,9 +29,9 @@
                                         <div class="form-group">
                                             <label for="file">Gallery Tag:</label>
                                             <select name="gallery_tag" class="form-control">
-                                                <option>--Select One--</option>
+                                                <option value="">--Select One--</option>
                                                 <option value="campus">Campus</option>
-                                                <option value="event">Events</option>
+                                                <option value="events">Events</option>
                                                 <option value="photo">Photo Gallary</option>
                                                 <option value="video">Video Gallary</option>  
                                             </select>

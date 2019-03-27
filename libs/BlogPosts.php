@@ -59,18 +59,7 @@
         $result = $this->db->readData($query);
         return $result;
     }
-    /*
-    public function getSingleTechnology($id){
- 		$query = "SELECT * FROM subjects_table WHERE id= $id";
-        $result = $this->db->readData($query);
-        return $result;
- 	}
 
-    public function deleteNotices($del_notices){
-        $query = "DELETE FROM notices_table WHERE id = $del_notices";
-        $result = $this->db->deleteData($query);
-        return $result;
-    }*/
 
  }
 

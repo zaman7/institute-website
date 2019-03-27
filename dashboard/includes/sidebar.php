@@ -110,6 +110,21 @@
                     <h3><a href="about.php"><i class="fa fa-university" aria-hidden="true"></i> About Institute</a></h3>
                 </div>
 
+                <div class="dashboard-link">
+                    <?php 
+                        /*$query = "SELECT * FROM contacts_table WHERE status= '0' ORDER BY id DESC";
+                        $msg = mysqli_query($query);
+                        if ($msg) {
+                            $count = mysqli_num_rows($msg);
+                            echo "(".$count.")";
+                        }else {
+                            echo "(0)";
+                        } */          
+
+                    ?>
+                    <h3><a href="inbox.php"><i class="fa fa-inbox" aria-hidden="true"></i> Inbox</a></h3>
+                </div>
+
             </div>
         </div>
     </div>

@@ -17,52 +17,32 @@
                                 <table class="table table-striped" id="dataTable">
                                     <thead>
                                         <tr>
-                                            <th width="33.99%">Sl No.</th>
-                                            <th width="33.99%">Message</th>
-                                            <th width="33.99%">Action</th>
+                                            <th>Sl No.</th>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Subject</th>
+                                            <th>Message</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <?php 
+
+                                            $getAllMsg = $contact->getAllMessages();
+                                            if ($getAllMsg) {
+                                                $i=0;
+                                                while ($value = $getAllMsg->fetch_assoc()) {
+                                                    $i++;
+
+                                        ?>
                                         <tr>
-                                            <td>01</td>
-                                            <td>Internet</td>
-                                            <td><a href="">Edit</a> || <a href="">Delete</a></td>
+                                            <td><?php echo $i; ?></td>
+                                            <td><?php echo $value['name']; ?> </td>
+                                            <td><?php echo $value['email']; ?> </td>
+                                            <td><?php echo $value['subject']; ?> </td>
+                                            <td><?php echo $value['messages']; ?> </td>
+                                            <td><a href="">Seen</a> || <a href="">Delete</a></td>
                                         </tr>
-                                        <tr>
-                                            <td>02</td>
-                                            <td>Explorer </td>
-                                            <td><a href="">Edit</a> || <a href="">Delete</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>03</td>
-                                            <td>Internet</td>
-                                            <td><a href="">Edit</a> || <a href="">Delete</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>04</td>
-                                            <td>Explorer </td>
-                                            <td><a href="">Edit</a> || <a href="">Delete</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>05</td>
-                                            <td>Internet</td>
-                                            <td><a href="">Edit</a> || <a href="">Delete</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>06</td>
-                                            <td>Explorer </td>
-                                            <td><a href="">Edit</a> || <a href="">Delete</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>07</td>
-                                            <td>Internet</td>
-                                            <td><a href="">Edit</a> || <a href="">Delete</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>08</td>
-                                            <td>Explorer </td>
-                                            <td><a href="">Edit</a> || <a href="">Delete</a></td>
-                                        </tr>
+                                    <?php } } ?>
                                     </tbody>
                                 </table>
                             </div>

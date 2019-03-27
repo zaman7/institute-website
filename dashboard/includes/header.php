@@ -26,6 +26,8 @@
     $subjects = new Subjects();
     $blogs = new BlogPosts();
     $stats = new Stats();
+    $gallery = new Galleries();
+    $contact = new Contacts();
 ?>
 <!DOCTYPE html>
 <html lang="en">

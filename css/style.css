@@ -225,9 +225,7 @@ body {
     font-weight: 700;
     font-family: 'Oxygen', sans-serif;
 }
-.mrq_item{
-    font-size: 16px;
-}
+
 /* marq ends */
 /* banner starts */
 #banner img {
@@ -519,7 +517,7 @@ body {
     margin-bottom: 50px;
 }
 
-#narrow .notice .note-slick .note:hover h6 {
+#narrow .notice .note-slick .note:hover a {
     color: #333;
     cursor: pointer;
 }
@@ -550,6 +548,7 @@ body {
 
 #narrow .notice .note-slick .note h6 {
     font-size: 16px;
+    font-weight: 500;
     font-family: 'Oxygen', sans-serif;
     color: #888;
     transition: all linear 0.2s;
@@ -645,7 +644,9 @@ body {
     width: 25px;
     vertical-align: middle;
 }
-
+.student button{
+    color: #fff;
+}
 /* link ends */
 /* content ends */
 /* counter part starts */
@@ -967,7 +968,7 @@ body {
 #content .welcome p,
 #content .wel p {
     font-weight: 300;
-    padding-bottom: 0 !important;
+    padding-bottom: 50 !important;
 }
 
 #content .about-princi h2 {
@@ -977,7 +978,7 @@ body {
 
 #content .about-princi p {
 
-    padding-bottom: 0 !important;
+    padding-bottom: 50 !important;
 }
 
 #content .about-princi .message {
@@ -1005,6 +1006,7 @@ body {
 /* about ends */
 
 /* teacher starts */
+
 .teach .nav-tabs {
     border-bottom: none;
 }
@@ -1047,11 +1049,22 @@ body {
     color: #222;
 }
 
+
+.teach .nav-tabs .nav-link{
+    border-radius: none;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+.teach .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+    color: #fff;
+    background-color: #00be89;
+    border: 1px solid #00be89;
+}
 /* teacher ends */
 
 /* student starts */
 .student select{
-    width: 400px;
+    width: 100%;
     height: 45px;
     padding: 10px;
     border-color: #dfdfdf;
@@ -1063,7 +1076,7 @@ body {
 }
 .student button{
     height: 45px;
-    width: 160px;
+    width: 50%;
     background: #00be89;
     border: none;
     display: block;
@@ -1095,11 +1108,182 @@ body {
 }
 /* lab ends */
 
+/* events starts*/
+.event h4{
+	font-size: 20px;
+	color: #222;
+   font-family: 'Oxygen', sans-serif;
+	padding: 10px 0;
+}
+.event a i{
+	padding-right: 10px;
+}
+.event a{
+	font-size: 14px;
+	color: #666;
+   font-family: 'Oxygen', sans-serif;
+	padding: 10px 0;
+	padding-right: 20px;
+}
 
+.event p{
+	padding: 10px 0 0;
+	padding-bottom: 0 !important;
+}
+.event .event-item{
+	padding: 30px;
+	border: 1px solid #dfdfdf;
+	position: relative;
+	margin-bottom: 12px;
+}
+.event .event-item:before{
+	position: absolute;
+	content: '';
+	width: 5px;
+	height: 80px;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+	background: #00be89;
+	
+	
+}
+/* events ends*/
+/* admission starts */
+.admission ul li{
+    padding: 20px 0;
+}
+.admission ul{
+    padding-bottom: 50px;
+}
+.admission ul li p.p{
+    font-weight: 500 !important;
+    display: inline;
+}
+.admission ul li::before{
+    content: "\f24d";
+    font-family: FontAwesome;
+    padding-right: 10px;
+}
+.admission a{
+    color: #fff;
+    background: #00be89;
+    font-family: 'Oxygen', sans-serif;
+    font-size: 16px;
+    padding: 15px 35px;
+    margin-top: 10px;
+    display: inline-block;
+    
+}
+/* admission ends */
+/* notice starts */
+.notice h6{
+    text-transform: capitalize;
+    font-family: 'Oxygen', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+.notice p{
+    color: #363636 !important;
+}
+.notice .bor{
+    border: 1px solid #dfdfdf;
+    padding-top: 15px;
+}
+.notice a{
+    color: #888;
+    font-family: 'Oxygen', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: capitalize;
+    display: inline-block;
+}
+/* notice ends */
 
+/* contact starts */
+.contact a{
+    display: inline-block;
+    font-family: 'Oxygen', sans-serif;
+    font-size: 16px;
+    color: #666666;
+    text-transform: capitalize;
+}
+.contact a i{
+    color: #00be89;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #00be89;
+    border-radius: 50px;
+    line-height: 40px;
+    text-align: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.contact .h{
+    padding-top: 95px;
+}
+.contact iframe{
+    height: 240px;
+    width: 100%;
+}
+.contact form{
+    width: 100%;
+    
+}
+.contact form input.name{
+    width: 95%;
+}
+.contact form input{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    text-transform: capitalize;
+}
+.contact form textarea{
+    width: 100%;
+    resize: none;
+    margin: 10px 0;
+    padding: 10px;
+    height: 140px;
+    text-transform: capitalize;
+}
+.contact form button{
+    background: #00be89;
+    border: none;
+    padding: 10px 50px;
+    color: #fff;
+    margin-top: 10px;
+}
+.contact
+/* contact ends */
 
+/* result starts */
+.result form{
+    width: 100%;
+}
+.result form select{
+    width: 100%;
+    margin: 10px 0;
+    border-color: #dfdfdf;
+    padding: 10px 20px;
+    color: #666;
+    font-family: 'Oxygen', sans-serif;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+.result form select .opt{
+    width: 100%;
+}
 
-
+.result form button{
+    background: #00be89;
+    border: none;
+    padding: 10px 50px;
+    color: #fff;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+/* result ends */
 
 
 
