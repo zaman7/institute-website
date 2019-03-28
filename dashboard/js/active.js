@@ -21,6 +21,7 @@
         $("#selectmenu").selectmenu();
 
         var docH = $(document).height();
+        
         var sidebarH = $(".sidebar-area");
         var mainContentH = $(".main-content").height();
         if (mainContentH > 570) {
